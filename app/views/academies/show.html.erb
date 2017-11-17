@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Academy name:</strong>
+  <%= @academy.academy_name %>
+</p>
+
+<p>
+  <strong>Academy instructor:</strong>
+  <%= @academy.academy_instructor %>
+</p>
+
+<p>
+  <strong>Academy country:</strong>
+  <%= @academy.academy_country %>
+</p>
+
+<%= link_to 'Edit', edit_academy_path(@academy) %> |
+<%= link_to 'Back', academies_path %>

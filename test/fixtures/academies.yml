@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  academy_name: MyString
+  academy_instructor: MyString
+  academy_country: MyString
+
+two:
+  academy_name: MyString
+  academy_instructor: MyString
+  academy_country: MyString

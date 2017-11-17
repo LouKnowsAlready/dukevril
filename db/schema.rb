@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171027081554) do
+ActiveRecord::Schema.define(version: 20171116090601) do
+
+  create_table "academies", force: :cascade do |t|
+    t.string "academy_name"
+    t.string "academy_instructor"
+    t.string "academy_country"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -29,6 +37,8 @@ ActiveRecord::Schema.define(version: 20171027081554) do
     t.string "last_name"
     t.date "birth_date"
     t.string "country"
+    t.integer "academy_id"
+    t.index ["academy_id"], name: "index_users_on_academy_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

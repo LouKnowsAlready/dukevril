@@ -25,6 +25,11 @@
   </div> 
 
   <div class="field">
+     <%= f.label "Academy" %>
+     <%= collection_select(:user,:academy_id,Academy.all,:id,:academy_name,{},{:prompt=>'Select'})  %>
+  </div>
+
+  <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true %>
   </div>
