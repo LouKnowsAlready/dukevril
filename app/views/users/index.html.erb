@@ -5,6 +5,9 @@
   <% if current_user.isAdmin                                       %>
       | <%=    link_to 'Events', events_path                       %>
   <% end                                                           %>
+ <p>   
+   <%= image_tag current_user.avatar.thumb.url %>
+ </p>
   <h1>Welcome <%= current_user.first_name                          %></h1>
 <% else                                                            %>
 <%= link_to 'Login', new_user_session_path                         %> | 
