@@ -6,7 +6,7 @@
       | <%=    link_to 'Events', events_path                       %>
   <% end                                                           %>
  <p>   
-   <%= image_tag current_user.avatar.thumb.url %>
+   <%= image_tag current_user.avatar.url %>
  </p>
   <h1>Welcome <%= current_user.first_name                          %></h1>
 <% else                                                            %>
